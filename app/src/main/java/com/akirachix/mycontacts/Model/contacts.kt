@@ -1,9 +1,11 @@
 package com.akirachix.mycontacts.Model
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
+import androidx.room.util.TableInfo
 
-@Entity(tableName = "Contacts")
+@Entity(tableName = "Contacts", indices = [Index(value= arrayOf("phoneNumber"), unique= true)])
 
 data class Contact(
 

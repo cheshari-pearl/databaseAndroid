@@ -1,5 +1,6 @@
 package com.akirachix.mycontacts.ViewModel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.akirachix.mycontacts.Model.Contact
@@ -14,4 +15,10 @@ class ContactsViewModel: ViewModel() {
             contactsrepo.saveContact(contact)
         }
     }
+
+    fun getAllContacts():LiveData<List<Contact>>{
+
+        return contactsrepo.getAllContacts()
+    }
+
 }

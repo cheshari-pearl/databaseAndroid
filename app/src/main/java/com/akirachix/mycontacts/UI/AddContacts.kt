@@ -9,7 +9,7 @@ import com.akirachix.mycontacts.R
 import com.akirachix.mycontacts.ViewModel.ContactsViewModel
 import com.akirachix.mycontacts.databinding.ActivityAddContactsBinding
 
-class Add_contacts : AppCompatActivity(){
+class AddContacts : AppCompatActivity(){
     lateinit var binding: ActivityAddContactsBinding
     val contactsViewModel: ContactsViewModel by viewModels()
 
@@ -30,6 +30,7 @@ class Add_contacts : AppCompatActivity(){
         val phone = binding.tvNumber.text.toString()
         val email = binding.tvEmail.text.toString()
         var error = false
+
         if (name.isBlank()) {
             error = true
             binding.tvName.error = getString(R.string.name_is_required)

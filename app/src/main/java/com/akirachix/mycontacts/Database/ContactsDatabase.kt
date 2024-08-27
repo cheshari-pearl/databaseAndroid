@@ -1,6 +1,6 @@
 package com.akirachix.mycontacts.Database
 
-import ContactDao
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
@@ -12,6 +12,7 @@ abstract class ContactsDatabase : RoomDatabase() {
     abstract fun getContactDao(): ContactDao
 
     companion object {
+
         private var database: ContactsDatabase? = null
 
         fun getDatabase(context: Context): ContactsDatabase {
